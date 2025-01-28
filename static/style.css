@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fa; /* Soft light gray background color */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App Window */
+.app-window {
+  max-width: 800px; /* Set maximum width */
+  margin: auto; /* Center align */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #ffffff; /* White background for content */
+  padding: 2rem; /* Padding for content */
+  text-align: center; /* Center content */
+}
+
+/* Logo Section Styles */
+.logo {
+  background-color: #2e3a59; /* Dark grayish blue background color for the logo section */
+  padding: 40px 20px; /* Padding around the logo and title, larger padding for top and bottom */
+  border-radius: 10px; /* Optional: rounded corners for the background */
+  width: 100%; /* Ensure the logo section spans the full width of the screen */
+  text-align: center; /* Center the content inside the logo section */
+  margin-bottom: 2rem; /* Space below the logo section */
+  box-sizing: border-box; /* Ensure padding does not affect the width calculation */
+}
+
+.logo-img {
+  width: 120px; /* Set the desired width */
+  height: 120px; /* Set the height equal to width for a perfect circle */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensures the image covers the area without distorting */
+}
+
+h1 {
+  color: #ffffff; /* White color for the title text */
+  font-size: 2.5rem; /* Larger font for the title */
+  margin-top: 1rem; /* Space between the logo and the title */
+  font-family: 'Pacifico', sans-serif; /* Custom font */
+}
+
+/* Header Section */
+.bg-primary {
+  background-color: #006f92 !important; /* Professional medium blue */
+}
+
+/* Form Styles */
+h2 {
+  color: #333; /* Darker text for headings */
+  margin-bottom: 1.5rem; /* Spacing below heading */
+  font-size: 2rem; /* Increase font size for emphasis */
+}
+
+.form-group {
+  margin-bottom: 1.5rem; /* Spacing between form groups */
+  text-align: left; /* Align form labels to the left */
+}
+
+.col-form-label {
+  font-weight: bold; /* Bold labels */
+  color: #004f71; /* Darker blue for labels */
+}
+
+/* Input and Select Styles */
+input.form-control, 
+select.form-control {
+  border: 2px solid #ccd3e0; /* Thicker border for input and select */
+  border-radius: 0.25rem; /* Rounded input corners */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transition for border color and shadow */
+  padding: 0.5rem; /* Add padding to inputs */
+  width: 100%; /* Ensure inputs stretch to full width */
+  margin-top: 5px;
+}
+
+input.form-control:focus, 
+select.form-control:focus {
+  border-color: #4c9cc7; /* Light blue border on focus */
+  box-shadow: 0 0 0 0.2rem rgba(76, 156, 199, 0.25); /* Light blue shadow effect on focus */
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #2e3a59; /* Dark grayish blue button color */
+  border: none; /* Remove border */
+  color: #ffffff; /* White text color */
+  padding: 0.75rem 2rem; /* Larger padding for buttons */
+  font-size: 1rem;
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+  width: 100%; /* Full-width button */
+  margin-top: 1.5rem; /* Space above the button */
+}
+
+.btn-primary:hover {
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Result Display Styles */
+.prediction-result {
+  background-color: #f1f8fb; /* Very light blue background */
+  border-left: 5px solid #2e3a59; /* Dark blue left border */
+  padding: 1rem; /* Padding for the result box */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 2rem; /* Add space above the result */
+  text-align: left; /* Left-align result text */
+}
+
+.result-title {
+  color: #2d5b76; /* Muted blue for title */
+  font-weight: bold; /* Bold title */
+  font-size: 1.25rem; /* Slightly larger font for title */
+}
+
+.result-value {
+  font-size: 1.5rem; /* Larger font for result value */
+  color: #2e3a59; /* Dark grayish blue for result value */
+  margin-top: 0.5rem; /* Space between title and value */
+}
+
+/* Footer Styles */
+footer {
+  margin-top: 20px; /* Space above the footer */
+  background-color: #2e3a59; /* Footer background */
+  padding: 1rem 0; /* Padding for footer */
+  color: white; /* White text color for footer */
+  text-align: center; /* Center-align the text inside the footer */
+}
+
+footer p {
+  margin: 0; /* Remove margin */
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+  .app-window {
+      padding: 1rem; /* Less padding on smaller screens */
+  }
+
+  .logo {
+      width: 100px; /* Smaller logo for mobile */
+  }
+
+  h2 {
+      font-size: 1.5rem; /* Smaller heading size for mobile */
+  }
+
+  .btn-primary {
+      padding: 0.75rem 1.5rem; /* Smaller button padding on mobile */
+  }
+
+  .form-group {
+      text-align: center; /* Center align form elements on small screens */
+  }
+}
