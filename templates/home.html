@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boston House Prices Prediction</title>
+  
+  <!-- Link to the favicon (title logo) -->
+  <link rel="icon" href="{{ url_for('static', filename='logo/logo.png') }}" type="image/png">
+  
+  <!-- Link to the CSS file using Flask's url_for -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="app-window">
+    <!-- Logo Section (displayed in the body) -->
+    <div class="logo">
+      <img src="{{ url_for('static', filename='logo/logo.png') }}" alt="Logo" class="logo-img">
+      <h1>Boston House Price Prediction</h1>
+    </div>
+
+    <!-- Form for receiving user input -->
+    <form action="{{ url_for('predict') }}" method="post">
+      <div class="form-group">
+        <input type="text" name="CRIM" class="form-control" placeholder="CRIM" required="required" />
+      </div>
+      <div class="form-group">
+        <input type="text" name="ZN" class="form-control" placeholder="ZN" required="required" />
+      </div>
+      <div class="form-group">
+        <input type="text" name="INDUS" class="form-control" placeholder="INDUS" required="required" />
+      </div>
+      <div class="form-group">
+        <input type="text" name="CHAS" class="form-control" placeholder="CHAS" required="required" />
+      </div>
+      <div class="form-group">
+        <input type="text" name="NOX" class="form-control" placeholder="NOX" required="required" />
+      </div>
+      <div class="form-group">
+        <input type="text" name="RM" class="form-control" placeholder="RM" required="required" />
+      </div>
+      <div class="form-group">
+        <input type="text" name="Age" class="form-control" placeholder="Age" required="required" />
+      </div>
+      <div class="form-group">
+        <input type="text" name="DIS" class="form-control" placeholder="DIS" required="required" />
+      </div>
+      <div class="form-group">
+        <input type="text" name="RAD" class="form-control" placeholder="RAD" required="required" />
+      </div>
+      <div class="form-group">
+        <input type="text" name="TAX" class="form-control" placeholder="TAX" required="required" />
+      </div>
+      <div class="form-group">
+        <input type="text" name="PTRATIO" class="form-control" placeholder="PTRATIO" required="required" />
+      </div>
+      <div class="form-group">
+        <input type="text" name="B" class="form-control" placeholder="B" required="required" />
+      </div>
+      <div class="form-group">
+        <input type="text" name="LSTAT" class="form-control" placeholder="LSTAT" required="required" />
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Predict</button>
+    </form>
+
+    <!-- Prediction Result Display -->
+    <div class="prediction-result">
+      {{ prediction_text }}
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Boston House Prices Prediction. All rights reserved.</p>
+        <p>Developed by SURESH BEEKHANI</p>
+      </div>
+    </footer>
+  </body>
+  
+  </html>
